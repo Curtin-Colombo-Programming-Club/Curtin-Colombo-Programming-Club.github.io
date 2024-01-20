@@ -5,12 +5,17 @@
   "main": "src/server.js",
   "scripts": {
     "test": "node ./src/server.js",
-    "build": "mkdir -p dist/static && cp -R static/* dist/static && cp -R templates/* dist/"
+    "build": "mkdir -p docs/static && cp -R static/* docs/static && cp -R templates/* docs/ && npm install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
