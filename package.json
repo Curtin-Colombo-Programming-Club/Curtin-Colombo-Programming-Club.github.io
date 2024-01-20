@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test": "node ./src/server.js",
-    "build": "cp -R static/* dist/ && cp -R templates/* dist/"
+    "build": "mkdir -p dist/static && cp -R static/* dist/static && cp -R templates/* dist/"
   },
   "author": "",
   "license": "ISC",
