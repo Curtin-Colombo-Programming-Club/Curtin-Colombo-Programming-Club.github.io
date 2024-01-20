@@ -30,6 +30,9 @@ jobs:
     - name: Build and Organize Files
       run: |
         mkdir -p build
+        mkdir -p build/css
+        mkdir -p build/js
+        mkdir -p build/images
         cp -R templates/* build/
         cp -R static/css/* build/css/
         cp -R static/js/* build/js/
