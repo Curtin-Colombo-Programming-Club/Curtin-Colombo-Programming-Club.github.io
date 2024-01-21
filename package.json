@@ -4,10 +4,12 @@
   "description": "\"# Curtin-Colombo-Programming-Club.github.io\"",
   "main": "src/server.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "node ./src/server.js",
-    "build": "mkdir -p docs/static && cp -R static/* docs/static && cp -R templates/* docs/ && npm install",
+    "build": "mkdir -p dist/static && cp -R static/* dist/static && cp -R templates/* dist/ && npm install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs"
+    "postdeploy": "rm -rf dist",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +19,9 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "yarn@4.0.2"
 }

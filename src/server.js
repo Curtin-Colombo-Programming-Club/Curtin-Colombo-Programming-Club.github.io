@@ -1,6 +1,7 @@
 const http = require('http');
 const express = require('express');
 const path = require("path");
+const port = process.env.PORT || 3001;
 
 function sendTemplate(res, file) {
     res.sendFile(`${path.join(process.cwd(), "./templates")}/${file}`);
@@ -18,6 +19,6 @@ app.get("/", (req, res) => {
 
 
 //
-httpServer.listen(8080, "0.0.0.0", () => {
+httpServer.listen(port, "0.0.0.0", () => {
     console.log("Server up!");
 });
