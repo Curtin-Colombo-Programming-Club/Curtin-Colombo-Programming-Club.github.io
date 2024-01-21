@@ -2,9 +2,9 @@
   "name": "curtin-colombo-programming-club.github.io",
   "version": "1.0.0",
   "description": "\"# Curtin-Colombo-Programming-Club.github.io\"",
-  "main": "src/server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node app.js",
     "test": "node ./src/server.js",
     "build": "mkdir -p dist/static && cp -R static/* dist/static && cp -R templates/* dist/ && npm install",
     "predeploy": "npm run build",
