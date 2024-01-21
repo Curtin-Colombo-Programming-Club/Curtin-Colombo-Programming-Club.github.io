@@ -1,7 +1,6 @@
-const { app, httpServer } = require("./src/server");
+const app = require("./src/server");
 
-if (require.main === module) {
-    httpServer.listen(port, "0.0.0.0", () => {
-        console.log("Server up!");
-    });
-}
+const server = app.listen(port, () => console.log(`app listening on port ${port}!`));
+
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;

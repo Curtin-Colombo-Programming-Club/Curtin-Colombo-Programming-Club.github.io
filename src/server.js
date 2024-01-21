@@ -23,5 +23,4 @@ if (require.main === module) {
 }
 
 
-module.exports.app = app;
-module.exports.httpServer = httpServer;
+module.exports = app;
